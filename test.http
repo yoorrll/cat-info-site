@@ -1,0 +1,7 @@
+GET http://localhost:3000/api/cat-breed-list/
+
+###
+GET http://localhost:3000/api/cat-breed-list/abys
+
+###
+GET http://localhost:3000/api/cat-img-list
