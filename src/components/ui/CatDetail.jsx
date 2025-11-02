@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 /**
  * 고양이 상세 정보 컴포넌트
  * @param {Object} props
@@ -13,9 +15,11 @@ export default function CatDetail({ cat }) {
   return (
     <div className="flex flex-col md:flex-row gap-8">
       <div className="relative w-full md:w-1/2 h-[400px] bg-lime-400 rounded-lg overflow-hidden">
-        <img
+        <Image
           src={cat.url}
           alt={cat.breeds[0].name}
+          fill
+          sizes="610px"
           className="w-full h-full object-cover"
         />
       </div>
