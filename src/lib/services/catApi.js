@@ -4,7 +4,7 @@
  */
 export async function getCats() {
   const res = await fetch(
-    `https://api.thecatapi.com/v1/images/search?api_key=${process.env.CAT_API_KEY}&limit=8&has_breeds=1`,
+    `https://api.thecatapi.com/v1/images/search?api_key=${process.env.CAT_API_KEY}&limit=8&has_breeds=1`
   );
 
   if (!res.ok) {
@@ -21,6 +21,7 @@ export async function getCats() {
 export async function getCatBreeds() {
   const res = await fetch(
     `https://api.thecatapi.com/v1/breeds?api_key=${process.env.CAT_API_KEY}&limit=8`,
+    { cache: "no-store" }
   );
 
   if (!res.ok) {
@@ -37,7 +38,7 @@ export async function getCatBreeds() {
  */
 export async function getCatById(id) {
   const res = await fetch(
-    `https://api.thecatapi.com/v1/images/search?api_key=${process.env.CAT_API_KEY}&breed_ids=${id}`,
+    `https://api.thecatapi.com/v1/images/search?api_key=${process.env.CAT_API_KEY}&breed_ids=${id}`
   );
 
   if (!res.ok) {
@@ -57,7 +58,7 @@ export async function getCatByIdClient(id) {
   //   `https://api.thecatapi.com/v1/images/search?breed_ids=${id}`,
   // );
   const res = await fetch(
-    `https://api.thecatapi.com/v1/images/search?api_key=${process.env.NEXT_PUBLIC_CAT_API_KEY}&breed_ids=${id}`,
+    `https://api.thecatapi.com/v1/images/search?api_key=${process.env.NEXT_PUBLIC_CAT_API_KEY}&breed_ids=${id}`
   );
 
   if (!res.ok) {
