@@ -2,6 +2,8 @@ import { getCatBreeds } from "@/lib/services/catApi";
 import Image from "next/image";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function CatBreeds() {
   const breeds = await getCatBreeds();
 
