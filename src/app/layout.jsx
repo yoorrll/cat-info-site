@@ -3,6 +3,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/common/Header";
+import Providers from "./providers";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -36,8 +37,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${notoSans.className} ${geistSans.variable} antialiased`}
       >
-        <Header />
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
