@@ -4,3 +4,6 @@
   --color-primary: #ff6b6b;
   --color-secondary: rgba(75, 192, 192, 0.8);
 }
+
+/* 다크 모드 사용 설정: 스타일 적용 시 className="bg-white dark:bg-black" */
+@custom-variant dark (&:where(.dark, .dark *));
