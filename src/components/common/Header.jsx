@@ -1,6 +1,13 @@
+// "use client";
+
 import Link from "next/link";
+// import { useEffect } from "react";
 
 export default function Header() {
+  // useEffect(() => {
+  //   throw new Error("루트 레이아웃 에러 발생");
+  // }, []);
+
   return (
     <header className="w-full bg-white shadow-md">
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
