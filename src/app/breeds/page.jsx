@@ -4,6 +4,11 @@ import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: "고양이 품종 리스트",
+  description: "다양한 고양이 품종들을 살펴보세요",
+};
+
 export default async function CatBreeds() {
   const breeds = await getCatBreeds();
 
